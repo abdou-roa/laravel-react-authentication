@@ -5,17 +5,17 @@ import ReactDom from 'react-dom/client';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { store } from './store';
+import { store } from './src/store';
 import { Provider } from 'react-redux';
 
-import Auth from './auth/Auth';
-import Login from './auth/login/Login';
-import Register from './auth/register/Register';
-import Home from './components/home/Home';
-import App from './srcApp';
+import Auth from './src/auth/Auth';
+import Login from './src/auth/login/Login';
+import Register from './src/auth/register/Register';
+import Home from './src/components/home/Home';
+import App from './src/srcApp';
 
 
-import ProtectedRoute from './util/ProtectedRoute';
+import ProtectedRoute from './src/util/ProtectedRoute';
 
 
 
