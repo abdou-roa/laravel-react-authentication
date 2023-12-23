@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Typography, TextField, Button} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import api from '../../util/api';
 
 const Register = () => {
 
@@ -30,7 +31,7 @@ const Register = () => {
     btnPointer.setAttribute('disabled', true);
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/register', formDataJSON).then((response)=>{
+      const response = await api.post('/register', formDataJSON).then((response)=>{
         btnPointer.innerHTML = 'Register';
         btnPointer.removeAttribute('disabled');
         let data = response.data;

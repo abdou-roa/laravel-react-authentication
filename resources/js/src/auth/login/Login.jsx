@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Typography, TextField, Button} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import api from '../../util/api';
 
 const Login = () => {
   // const classes = useStyles();
@@ -29,7 +30,7 @@ const Login = () => {
     btnPointer.innerHTML = 'Please wai..';
     btnPointer.setAttribute('disabled', true);
    
-    axios.post('http://127.0.0.1:8000/api/login', formDataJSON).then((response) => {
+    api.post('/login', formDataJSON).then((response) => {
         btnPointer.innerHTML = 'Login';
         btnPointer.removeAttribute('disabled');
         const data = response.data;

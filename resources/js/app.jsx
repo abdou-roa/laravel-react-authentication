@@ -14,8 +14,8 @@ import Register from './src/auth/register/Register';
 import Home from './src/components/home/Home';
 import App from './src/srcApp';
 
-
 import ProtectedRoute from './src/util/ProtectedRoute';
+import api from './src/util/api';
 
 
 
